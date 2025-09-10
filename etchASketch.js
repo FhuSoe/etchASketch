@@ -10,7 +10,12 @@ function createGrid(size) {
         const cell = document.createElement('div');
         cell.classList.add('grid-cell');
         container.appendChild(cell);
+        //The event listener for the hover function leaving a black trail
+        cell.addEventListener("mouseenter", function() {
+            cell.style.backgroundColor = 'black';
+        })
     }
+
 }
 
 //calling the function the to create grids when the page loads
