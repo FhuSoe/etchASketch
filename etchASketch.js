@@ -1,4 +1,5 @@
 const container = document.getElementById("grid-container");
+const button = document.getElementById("reset-grid");
 const gridSize = 16;
 
 function createGrid(size) {
