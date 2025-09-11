@@ -9,7 +9,7 @@ button.addEventListener("click", () => {
     if (userSize > 100) {
         alert("The maximum size is 100")
      return;   
-    }
+    };
     //calling the function the to create grids when the page loads
     createGrid(userSize);
 });
