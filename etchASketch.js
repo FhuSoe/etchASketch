@@ -1,6 +1,18 @@
 const container = document.getElementById("grid-container");
 const button = document.getElementById("reset-grid");
-const gridSize = 16;
+//const gridSize = 16;
+
+
+//button eventListener to let the user choose the size of the grid
+button.addEventListener("click", () => {
+    let userSize = prompt("Input grid size");
+    if (userSize > 100) {
+        alert("The maximum size is 100")
+     return;   
+    }
+    //calling the function the to create grids when the page loads
+    createGrid(userSize);
+});
 
 function createGrid(size) {
     //to clear any existing cells
@@ -14,10 +26,7 @@ function createGrid(size) {
         //The event listener for the hover function leaving a black trail
         cell.addEventListener("mouseenter", function() {
             cell.style.backgroundColor = 'black';
-        })
-    }
+        });
+    };
+};
 
-}
-
-//calling the function the to create grids when the page loads
-createGrid(gridSize);
